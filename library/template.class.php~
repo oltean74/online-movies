@@ -1,0 +1,24 @@
+<?php 
+ if ( ! defined('BASE_PATH')) exit('No direct script access allowed');
+
+class Template {
+   
+  /** Display Template **/
+private $path;     
+private $template_path;     
+
+
+    function render($path) {
+     $this->path=$path;  
+         if (file_exists(BASE_PATH.'application/views/'.$this->path . '/view.php')) {
+            $this->template_path=BASE_PATH. 'application/views/'.$this->path.'/view.php'; 
+         } else {
+            $this->template_path=BASE_PATH.'application/views/view.php';
+         }
+      
+return $this->template_path;
+         
+   }
+
+}
+?>
