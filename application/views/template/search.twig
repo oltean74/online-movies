@@ -1,0 +1,24 @@
+{% extends "mobilemovies.html.twig" %}
+{% block search %}
+{% if results %}
+
+
+	<section class="cols">
+  <div class="col">
+<h3>{{msg_search}} "<span style="color: red;"/>{{results}}</span>"</h3>
+{% for key,result in search %} 
+<br/> 
+<a href="{{result.link}}"><h3><span style="float:left;"/>{{result.title}}</span></h3></a>
+
+{% endfor %}
+{% elseif results is empty %}
+     <p><span style="color: red;" /><strong>Please enter a search query</strong></span></p>
+ {% else %}
+ {% endif %}
+</div>
+</section>
+<script>
+$(document).ready(function(){ window.scroll(0,700); });
+</script>
+
+{% endblock search %}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% block head %}
+        <meta charset="utf-8" />   
+        <meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1, maximum-scale=1, user-scalable=0" />
+        <title>filme html5 online </title>
+        <link rel="shortcut icon" type="image/x-icon" href="css/images/favicon.ico" />
+        <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=coda"  type="text/css" />
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=jura:400,500,600,300" type="text/css" />
+        <link rel="stylesheet" href="video-js/video-js.min.css" type="text/css">
+        <script src="video-js/video.dev.js"></script>
+        <script> 
+               videojs.options.flash.swf = "video-js/video-js.swf"; 
+        </script>     
+        
+         {% endblock %}
+    </head>
+    <body>
+      <div class="wrapper">
+		  <header class="header">
+			<div class="shell"> 
+			 <div class="header-top"></div>
+			   <div class="sliderp">
+				 <div class="videohtml">
+					 <video id="video-mobile" class="video-js vjs-default-skin" controls preload="auto" autoplay width="540" 
+height="400" poster="css/images/poster.png" data-setup="{techorder:["html5","flash"]}">
+                     <source src="http://atlantic2481.dfcdn.net/19dbaf9c-04d3-4458-8bbc-f4fa1e6225ad?v=0&f=19dbaf9c-04d3-4458-8bbc-f4fa1e6225ad&s=69151&e=1456593774&m=6131603&sig=sGyPEPSkn121vege5kcibXNcxTA86jGiJN7GJYYHi3E%3D&b=1885950&t=video/mp4" type="video/mp4"/>
+                     </video>
+                 </div>
+               </div>
+            </div>
+           </header>
+       </div>
+     </body>
+</html>

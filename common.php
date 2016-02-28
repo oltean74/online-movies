@@ -1,23 +1,18 @@
 <?php
-  if (!defined('BASE_PATH')) {
-      exit('No direct script access allowed');
-  }
-
-function str_between($string, $start, $end)
-{
-    $string = ' '.$string;
+if (!defined('BASE_PATH')) {
+    exit('No direct script access allowed');
+}
+function str_between($string, $start, $end) {
+    $string = ' ' . $string;
     $ini = strpos($string, $start);
     if ($ini == 0) {
         return '';
     }
-    $ini += strlen($start);
+    $ini+= strlen($start);
     $len = strpos($string, $end, $ini) - $ini;
-
     return substr($string, $ini, $len);
 }
-
-function fix_s($s)
-{
+function fix_s($s) {
     $s = str_replace('&amp;', '&', $s);
     $s = str_replace('&ordm;', 's', $s);
     $s = str_replace('&Ordm;', 'S', $s);
@@ -38,7 +33,6 @@ function fix_s($s)
     $s = str_replace('&nbsp;', '', $s);
     $s = str_replace('&quot;', "'", $s);
     $s = str_replace('&#8', '', $s);
-
     $s = str_replace("\u015e", 'S', $s);
     $s = str_replace("\u015f", 's', $s);
     $s = str_replace("\u0163", 't', $s);
@@ -61,7 +55,6 @@ function fix_s($s)
     $s = str_replace("\u00e4", 'a', $s);
     $s = str_replace("\u00e9", 'e', $s);
     $s = str_replace("\/", '/', $s);
-
     $s = urlencode($s);
     $s = str_replace('%C8%99', 's', $s);
     $s = str_replace('%C8%9B', 't', $s);
@@ -75,25 +68,18 @@ function fix_s($s)
     $s = str_replace('%C8%9A', 'T', $s);
     $s = str_replace('%C5%9F', 's', $s);
     $s = str_replace('%E2%80%99', "'", $s);
-
     $s = str_replace('%3E%3E', '<', $s);
     $s = str_replace('%3C%3C', '>', $s);
-
-    $s = str_replace('<', '', $s);
-    $s = str_replace('>', '', $s);
     $s = urldecode($s);
-
     return $s;
 }
-function str_prep($string){
-  $string = str_replace(' ','%20',$string);
-  $string = str_replace('[','%5B',$string);
-  $string = str_replace(']','%5D',$string);
-  $string = str_replace('%3A',':',$string);
-  $string = str_replace('%2F','/',$string);
-  $string = str_replace('#038;','',$string);
-  $string = str_replace('&amp;','&',$string);
-  return $string;
+function str_prep($string) {
+    $string = str_replace(' ', '%20', $string);
+    $string = str_replace('[', '%5B', $string);
+    $string = str_replace(']', '%5D', $string);
+    $string = str_replace('%3A', ':', $string);
+    $string = str_replace('%2F', '/', $string);
+    $string = str_replace('#038;', '', $string);
+    $string = str_replace('&amp;', '&', $string);
+    return $string;
 }
-
-?>

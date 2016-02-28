@@ -1,13 +1,12 @@
 <?php
-
 /*
 ------------------
 Language: Hungarian
 ------------------
-*/ $lang = array();
+*/
+$lang = array();
 $lang['PAGE_TITLE'] = 'HTML5 online videok';
-$lang['HEADER_TITLE'] = 'My website header
-title';
+$lang['HEADER_TITLE'] = 'My website header title';
 $lang['SITE_NAME'] = 'Mobile Movies';
 $lang['MENU_CTG'] = 'Movie category';
 $lang['SLOGAN'] = 'HTML5 online videok';
@@ -24,8 +23,6 @@ $lang['MSG_NEXT'] = 'Kovetkezo';
 $lang['MSG_PREV'] = 'Elozo';
 $lang['LANG_LANG'] = array('hu' => 'Hungarian');
 $lang['LANG_MSG'] = 'Kovesse ezt az oldalt ';
-
 $lang['DISCLAIMER'] = 'Amennyiben tetszik valamelyik mese es elerheto szamodra dvd-n vagy mas adathordozon, ugy tamogasd a filmes ipart azzal, hogy megveszed az adott meset. Ezaltal a meset is jobb minodegben elvezheted!
 Az oldalon csupan videomegoszto oldalako tarolt videok beagyazott kodja talalhato.';
-
 $category = array('meselista' => 'Meselista');

@@ -1,0 +1,10 @@
+ <form method="post" >
+  <select name="lang" id ="user" style="margin-bottom:3px;" onChange="form.submit()">
+  <option value="#">Select...</option> 
+{% for key, lang in langs %}
+ <option value="{{lang}}" 
+{{ 'selected' ? 'yes' : '' }}>{{key}}
+</option>
+{% endfor %}
+ </select>
+</form>

@@ -1,0 +1,34 @@
+{% extends "mobilemovies.html.twig" %}
+{% block links %}
+
+ {% if hosts %}
+<div class="log"><h3><span>{{msg_link}}</span></h3></div> 
+ {% if html5 %}
+ {% for key,link in html5 %}
+  <br/><div class="sendlink"><span>{{link.title}}</span> 
+<form method="post" action="link.php" id="sendlinkform">
+<input type="hidden" name="linksender" value="{{link.stream}}">
+<input type="submit" name="submit" value="Watch online-HTML5 player">
+</form></div>
+
+
+<div class="flashlink"><span>{{link.title}}</span> 
+<form method="post" action="link.php" id="sendlinkform">
+<input type="hidden" name="linksender" value="{{link.stream}},flash">
+<input type="submit" name="submit" value="Watch online-Flash player">
+</form></div>
+ {% endfor %}
+{% elseif html5 is null or html5 is empty %}
+<span style="color: red;" /><strong>Sorry, no link available</strong>
+ {% else %}
+ {% endif %}
+ {% elseif hosts is null and hosts is empty %}
+<span style="color: red;" /><strong>Error: variable <b><i>{{hosts}}</i></b> is missing or renamed</strong></span>
+ {% else %}
+	{% endif %}
+ 
+ <script>
+$(document).ready(function(){ window.scroll(0,700); });
+</script>
+
+ {% endblock links %}

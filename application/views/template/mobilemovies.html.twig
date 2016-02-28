@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% block head %}
+        <meta charset="UTF-8">
+        <title>{{title}}</title>
+            <link rel="stylesheet" href="css/style.css" />
+            <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Coda' type='text/css' />
+            <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Jura:400,500,600,300' type='text/css' />
+            <script src="js/jquery-1.8.0.min.js" type="text/javascript"></script>
+            <script src="js/jquery.touchwipe.1.1.1.js" type="text/javascript"></script>
+            <script src="js/jquery.carouFredSel-5.5.0-packed.js" type="text/javascript"></script>
+            <!--[if lt IE 9]>
+            <script src="js/modernizr.custom.js"></script>
+            <![endif]-->
+            <script src="js/functions.js" type="text/javascript"></script>              
+       {% endblock %}
+    </head>
+    <body>
+   <div class="wrapper">
+			<header class="header">{% block header %}
+
+{% block language %}
+  {% if top_lang == 0 %}
+     {{message}}
+      {% embed "language.twig" %}
+     {% endembed %}
+  {% endif %}
+{% endblock language %}
+ 
+ <div class="shell">
+             <div class="header-top">
+                   <nav id="navigation">
+                   <a href="#" class="nav-btn"><{{ categories }}<span></span></a>
+                 <ul>
+{% for key, categ in categs %}
+ <li><a href="mobileonline.php?cat=1,{{key}}&lang={{http_lang}}">{{categ}}</a></li>  
+{% endfor %}
+	</ul>
+	  </nav>
+               <div class="cl">&nbsp;</div>
+            </div>
+	<div class="slider">
+          <div id="bg"></div>
+              <div id="carousel">
+<div>
+<h3><div class="slogan">{{slogan}}</div></h3>
+
+
+<img class="img-front" src="{{attribute(posters,0)}}" alt="Filme online" width="163" height="236" />
+<img class="img-mid" src="{{attribute(posters,1)}}" alt="Filme online" width="163" height="236" />
+<img class="img-back" src="{{attribute(posters,2)}}" alt="Filme online" width="163" height="236" />';
+ 
+ 
+<form method="post" action="search.php?lang={{http_lang}}" id="searchform">
+<input type="search" name="search"  placeholder="Search movie..." />
+<input type="submit" name="submit" value="Search">
+</form>
+	
+</div>
+</div>
+</div> 
+</div>
+
+
+
+			
+{% endblock %}
+ 
+            </header>
+ <section class="content">            
+       <div class="shell"> 
+       <div class="main">
+
+ {% block movies %}
+ {% endblock movies %}
+
+ {% block links %}
+ {% endblock links %}
+ {% block search %}
+ {% endblock search %}
+ {% block disclaimer %}
+ {% endblock disclaimer %}
+
+
+ 
+ </div>
+   </div> 
+ 
+</section>
+      <div id="footer">
+		<div class="shell">{% block footer %}
+   <p class="contact"><a href="disclaimer.php?lang={{http_lang}}">Disclaimer</a><span>|</span>www.mobilemovies.eu<span>|</span><a href="https://www.facebook.com/mobilemovies.eu"><img src="css/images/facebook-logo.jpg" width="12px" height="12px"/></a></p>
+ {% endblock %}
+      </div>
+     </div>
+   </div> 
+
+     </body>
+</html>
