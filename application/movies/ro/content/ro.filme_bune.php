@@ -11,7 +11,6 @@ class Filmebune extends Movie {
         if (strpos($movie, "filme-noi") !== false) {
             $my_movie->set_url('http://www.filme-bune.net/filme');
             $movie = $my_movie->movie_link();
-            echo $movie;
         }
         $htm = $my_movie->get_html($movie);
         $videos = explode('class="title"', $htm);

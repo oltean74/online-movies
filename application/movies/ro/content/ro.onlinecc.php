@@ -10,7 +10,6 @@ class Onlinecc extends Movie {
         $my_movie->set_str_replace('war', 'razboi');
         $my_movie->set_str_replace('horror', 'groaza');
         $movie = $my_movie->movie_link();
-        echo 'movie e ' . $movie;
         $html = $my_movie->get_html($movie);
         $videos = explode('id="post-', $html);
         unset($videos[0]);

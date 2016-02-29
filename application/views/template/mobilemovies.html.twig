@@ -31,7 +31,7 @@
  <div class="shell">
              <div class="header-top">
                    <nav id="navigation">
-                   <a href="#" class="nav-btn"><{{ categories }}<span></span></a>
+                   <a href="#" class="nav-btn"><{{ categories|raw }}<span></span></a>
                  <ul>
 {% for key, categ in categs %}
  <li><a href="mobileonline.php?cat=1,{{key}}&lang={{http_lang}}">{{categ}}</a></li>  
