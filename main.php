@@ -1,4 +1,5 @@
 <?php
+ini_set('display_errors', 'Off');
 define('DS', '/', true);
 define('BASE_PATH', realpath(dirname(__FILE__)) . DS, true);
 define('ROOT', dirname(dirname(__FILE__)) . DS, true);

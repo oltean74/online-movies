@@ -1,5 +1,9 @@
 {% extends "mobilemovies.html.twig" %}
 {% block movies %}
+<section class="content">            
+       <div class="shell"> 
+       <div class="main">
+
 {% if page > 1 %}
 <div class="prev"><a href="{{prev}}"><span>{{msg_prev}}</span></a></div>
 {% endif %}
@@ -29,6 +33,9 @@
 <script>
 $(document).ready(function(){ window.scroll(0,700); });
 </script>
-
+</div>
+   </div> 
+ 
+</section>
 {% endblock movies %}
 

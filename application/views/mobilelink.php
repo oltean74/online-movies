@@ -25,5 +25,6 @@ echo $twig->render('mobilelink.twig', array(
     'posters' => $images,
     'hosts' => $hosts,
     'msg_link' => $lang['MSG_LINK'],
-    'html5' => $h_link
+    'html5' => $h_link,
+    'noHtml' =>$no_html
 ));

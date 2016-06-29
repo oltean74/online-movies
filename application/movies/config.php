@@ -13,3 +13,5 @@ $encode = array(
     'http://www.voxfilmeonline.com' => 'mobile6',
     'http://mesekvilaga.x10.mx/mesevideo.php' => 'magyar1'
  );
+//hide html5 links for folowing providers:
+$no_html = "videomega.tv";

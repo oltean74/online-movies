@@ -1,12 +1,15 @@
 {% extends "mobilemovies.html.twig" %}
 {% block disclaimer %}
-<section class="content"> 
-<div class="shell"> 
+
+<section class="content">            
+       <div class="shell"> 
+       <div class="main">
 <h3><p class="tab">{{disclaimer|raw}}</p></h3>
-</div>
-</section>
 <script>
 $(document).ready(function(){ window.scroll(0,700); });
 </script>
-
+</div>
+   </div> 
+ 
+</section>
 {% endblock disclaimer %}

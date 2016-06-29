@@ -44,7 +44,7 @@
           <div id="bg"></div>
               <div id="carousel">
 <div>
-<h3><div class="slogan">{{slogan}}</div></h3>
+<h3><div class="slogan"  onclick="window.location.href='index.php'">{{slogan}}</div></h3>
 
 
 <img class="img-front" src="{{attribute(posters,0)}}" alt="Filme online" width="163" height="236" />
@@ -68,10 +68,7 @@
 {% endblock %}
  
             </header>
- <section class="content">            
-       <div class="shell"> 
-       <div class="main">
-
+ 
  {% block movies %}
  {% endblock movies %}
 
@@ -84,10 +81,7 @@
 
 
  
- </div>
-   </div> 
  
-</section>
       <div id="footer">
 		<div class="shell">{% block footer %}
    <p class="contact"><a href="disclaimer.php?lang={{http_lang}}">Disclaimer</a><span>|</span>www.mobilemovies.eu<span>|</span><a href="https://www.facebook.com/mobilemovies.eu"><img src="css/images/facebook-logo.jpg" width="12px" height="12px"/></a></p>
